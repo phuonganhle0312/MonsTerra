@@ -1,0 +1,31 @@
+.sky {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+  }
+#forest {
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;  
+}
+#water {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;  
+}
+#rocks {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;  
+}
+#grass {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+  
