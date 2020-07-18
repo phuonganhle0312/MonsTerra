@@ -1,31 +1,44 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>MonsTerra</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
+    />
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.24.1/dist/phaser.js"></script>
   </head>
   <body>
-    <div class="columns is-multiline is-mobile">
+    <div class="container">
+      <img src="./assets/images/sky.png" alt="sky">
+      <div class="columns is-multiline is-overlay is-mobile">
         <div class="column is-half">
-            <code>block 1</code>
-          </div>
-          <div class="column is-half">
-            <code>block 2</code>
-          </div>
-          <div class="column is-half">
-            <code>block 3</code>
-          </div>
-          <div class="column is-half">
-            <code>block 4</code>
-          </div>
-          <div class="column is-half">
-            <code>block 5</code>
-          </div>
-          <div class="column is-half">
-            <code>block 6</code>
-          </div>
+          <button class="title is-4" id="forest">Forest</button>
+        </div>
+        <div class="column is-half">
+          <button class="title is-4" id="water">Water</button>
+        </div>
+        <div class="column is-half">
+          <button class="title is-4" id="rocks">Rocks</button>
+        </div>
+        <div class="column is-half">
+          <button class="title is-4" id="grass">Grass</button>
+        </div>
+  
+    </div>
       </div>
+      <!-- <div class="columns is-mobile">
+          <div class="column is-half">
+            <div class="column is-overlay">Forest</div>
+          </div>
+        </div>
+            <div class="columns is-mobile"></div>
+          <div class="column is-half">
+            <div class="column is-overlay">Pond</div>
+          </div>
+        </div> -->
+    </div>
   </body>
 </html>
