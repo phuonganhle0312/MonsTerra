@@ -1,26 +1,53 @@
-.sky {
+.overlay {
+    text-align: center;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 60%;
-  }
+    position: absolute;
+    width: 100%;
+    z-index: -5;
+}
+
+.console.overlay {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.sky {
+    position: relative;
+    padding-top: 3.5%;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 66%;
+}
+.buttons {
+    position: absolute;
+    margin-top: 1%;
+    display: block;
+
+}
 #forest {
-        text-align: center;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;  
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 #water {
     text-align: center;
     display: block;
     margin-left: auto;
-    margin-right: auto;  
+    margin-right: auto;
 }
 #rocks {
     text-align: center;
     display: block;
     margin-left: auto;
-    margin-right: auto;  
+    margin-right: auto;
 }
 #grass {
     text-align: center;
@@ -28,4 +55,3 @@
     margin-left: auto;
     margin-right: auto;
 }
-  
