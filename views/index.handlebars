@@ -31,7 +31,7 @@
       </div> 
       <img src="./assets/images/sky.png" width="900" height="700" alt="sky" class="sky">
 
-      <div class="columns is-multiline is-overlay is-mobile buttons">
+      <div class="columns is-multiline is-overlay is-mobile" id="buttons">
           <div class="column is-half">
             <button class="title is-4" id="forest">Forest</button>
           </div>
@@ -46,18 +46,26 @@
           </div>
     
       </div>
-
+ </div>
+     <!--Div for get started button-->
+     <div class="columns is-centered is-overlay is-mobile" id="getstarted">
+      <div class="columns is-vcentered">
+      <button class="title is-4" id="get-started">Get Started</button>
       </div>
-      <!-- <div class="columns is-mobile">
-          <div class="column is-half">
-            <div class="column is-overlay">Forest</div>
-          </div>
-        </div>
-            <div class="columns is-mobile"></div>
-          <div class="column is-half">
-            <div class="column is-overlay">Pond</div>
-          </div>
-        </div> -->
+    </div>   
+      
+
+     
+   
+    <script>
+      $(document).ready(function(){
+      $("#get-started").on("click",function(){
+        console.log("click");
+      $("#buttons").css("display","block");
+      $("#getstarted").css("display","none");
+      });
+      });
+      </script>
     </div>
   </body>
 </html>
