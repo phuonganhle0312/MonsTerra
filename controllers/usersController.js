@@ -4,22 +4,28 @@ const db = require("../models");
 
 // /api/users/
 router.post("/", (req, res) => {
-  db.User.create(req.body)
-    .then((result) => {
-      res.json({
-        error: false,
-        data: result,
-        message: "Successfully created new user",
-      });
+  bcrypt.hash(req.body.password, 5).then(function (hash) {
+    console.log(hash);
+    db.User.create()({
+      email: req.body.email,
+      password: hash,
     })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json({
-        error: true,
-        data: null,
-        message: "Unable to create new user.",
+      .then((result) => {
+        res.json({
+          error: false,
+          data: result,
+          message: "new user created",
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+        res.status(500).json({
+          error: true,
+          data: null,
+          message: "error creating new user",
+        });
       });
-    });
+  });
 });
 
 // /api/users/:id

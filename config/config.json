@@ -1,15 +1,15 @@
 {
   "development": {
     "username": "root",
-    "password": "EkUF,wC,3^~9&WXfXJ*.4X~i",
-    "database": "associations_db",
+    "password": "",
+    "database": "",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "EkUF,wC,3^~9&WXfXJ*.4X~i",
-    "database": "associations_db",
+    "password": "",
+    "database": "",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

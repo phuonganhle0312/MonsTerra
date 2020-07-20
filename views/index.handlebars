@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MonsTerra</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
+    />
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.24.1/dist/phaser.js"></script>
+    <link rel="stylesheet"
+    href="/assets/style.css">
+  </head>
+  <body>
+    <div class="columns is-centered">
+      <div class="column" style="text-align: center;">
+        left value
+      </div>
+      <div class="column" style="text-align: center;">
+        right value
+      </div>
+    </div>
+
+    <!-- game console -->
+    
+    <div class="container is-mobile is-overlay" id="game-screen">
+      <div class="overlay">
+        <img src="./assets/images/MonsterraConsole.png" width=100% height=100% class="console-overlay">
+        
+      </div> 
+      <img src="./assets/images/sky.png" width="900" height="700" alt="sky" class="sky">
+
+      <div class="columns is-multiline is-overlay is-mobile" id="buttons">
+          <div class="column is-half">
+            <button class="title is-4" id="forest">Forest</button>
+          </div>
+          <div class="column is-half">
+            <button class="title is-4" id="water">Water</button>
+          </div>
+          <div class="column is-half">
+            <button class="title is-4" id="rocks">Rocks</button>
+          </div>
+          <div class="column is-half">
+            <button class="title is-4" id="grass">Grass</button>
+          </div>
+    
+      </div>
+ </div>
+     <!--Div for get started button-->
+     <div class="columns is-centered is-overlay is-mobile" id="getstarted">
+      <div class="columns is-vcentered">
+      <button class="title is-4" id="get-started">Get Started</button>
+      </div>
+    </div>   
+      
+
+     
+   
+    <script>
+      $(document).ready(function(){
+      $("#get-started").on("click",function(){
+        console.log("click");
+      $("#buttons").css("display","block");
+      $("#getstarted").css("display","none");
+      });
+      });
+      </script>
+    </div>
+  </body>
+</html>
