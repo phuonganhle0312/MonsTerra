@@ -1,25 +1,20 @@
-const bcrypt = require ("bcryptjs"); 
- 
-module.exports = function (sequelize, dataType) {
+module.exports = (sequelize, DataTypes) => {
   const User = sequelize.define("User", {
-    email: {type: dataType.STRING,
-      allowNull: false,
-      unique: true,
-      validate: {
-        isEmail: true,
+      username: {
+          type: DataTypes.STRING,
+          allowNull: false
       },
-    },
-    password: {
-      type: dataType.STRING,
-      allowNull: false,
-    },
+      password: {
+        type: DataTypes.STRING,
+        allowNull: false
+      }
   });
 
-  // User.associate = function (models) {
-  //   User.hasMany(models.Alert, {
-  //     onDelete: "cascade",
-  //   });
-  // };
+  User.associate = models => {
+      User.hasOne(models.Collection, {
+          onDelete: "cascade"
+      });
+  }
 
   return User;
-};
+}
