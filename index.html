@@ -13,6 +13,9 @@
     href="./public/assets/style.css">
   </head>
   <body>
+    <!-- <video autoplay muted loop id="bgVideo">
+      <source src="./public/assets/images/4K_5.mp4" type="video/mp4">
+    </video> -->
     <div class="columns is-centered">
       <div class="column" style="text-align: center;">
         left value
@@ -23,8 +26,7 @@
     </div>
 
     <!-- game console -->
-    
-    <div class="container is-mobile is-overlay" id="game-screen">
+    <div class="container is-overlay is-mobile" id="game-screen">
       <div class="overlay">
         <img src="./public/assets/images/MonsterraConsole.png" width=100% height=100% class="console-overlay">
         
@@ -32,7 +34,7 @@
       <img src="./public/assets/images/sky.png" width="900" height="700" alt="sky" class="sky">
       <!--Div for area buttons-->
   
-      <div class="columns is-multiline is-overlay is-mobile" id="buttons">
+      <!-- <div class="columns is-multiline is-overlay is-mobile" id="buttons">
         <div class="column is-half">
           <button class="title is-4" id="forest">Forest</button>
         </div>
@@ -44,28 +46,50 @@
         </div>
         <div class="column is-half">
           <button class="title is-4" id="grass">Grass</button>
-        </div>
+        </div> -->
   
     </div>
+      <!--Div for lore-->
+      <div class="columns is-centered is-overlay is-mobile" id="lore">
+        <div class="column is-3"></div>
+        <p>Welcome to the island of MonsTerra!<br>
+          MonsTerra is home to an abundance of creatures that come in a variety of colors.<br>
+           Each region of the map has creatures specific to their location. Some creatures are more rare than others.<br>
+            Be the first to collect them all and share your collection with your friends!<br>
+             <strong>To begin, click on a region to explore. View all of your collected creatures through the inventory icon!</strong>
+        </p>
+        </div>
+        
      <!--Div for get started button-->
      <div class="columns is-centered is-overlay is-mobile" id="getstarted">
+  
       <div class="columns is-vcentered">
       <button class="title is-4" id="get-started">Get Started</button>
       </div>
     </div>   
       
 
-     
-   
     <script>
+      $(document).ready(function(){
+      $("#get-started").on("click",function(){
+        console.log("click");
+       
+        const url = "./game.html";
+          $(location).attr('href',url);
+      });
+      });
+      </script>  
+   
+    <!-- <script>
       $(document).ready(function(){
       $("#get-started").on("click",function(){
         console.log("click");
       $("#buttons").css("display","block");
       $("#getstarted").css("display","none");
+      $("#lore").css("display", "none");
       });
       });
-      </script>
+      </script> -->
     
   </body>
 </html>
