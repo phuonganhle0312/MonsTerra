@@ -19,7 +19,7 @@ const UsersController = require("./controllers/usersController");
  * MIDDLEWARE
  */
 // Parse application body as JSON
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded());
 app.use(express.json());
 // Handlebars setup
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
