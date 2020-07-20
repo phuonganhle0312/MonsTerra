@@ -3,6 +3,8 @@ $(document).ready(() => {
     event.preventDefault();
     const email = $(".email-input").val();
     const password = $(".password-input").val();
-    console.log(email);
+    $.post("/api/auth", { email, passowrd }).then((response) => {
+      console.log(response);
+    });
   });
 });

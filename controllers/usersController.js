@@ -35,11 +35,5 @@ router.put("/:id", (req, res) => {
   });
 });
 
-// /api/users/:id
-router.delete("/:id", (req, res) => {
-  res.json({
-    message: "Delete route",
-  });
-});
 
 module.exports = router;

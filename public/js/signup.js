@@ -4,6 +4,5 @@ $(document).ready(() => {
     const username = $(".username");
     const email = $(".email-input").val();
     const password = $(".password-input").val();
-    console.log(username)
   });
 });

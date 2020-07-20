@@ -14,6 +14,7 @@ const db = require("./models");
 const ViewsController = require("./controllers/viewsController.js");
 const APIController = require("./controllers/apiController");
 const UsersController = require("./controllers/usersController");
+const AuthController = require("./controllers/authControllers")
 
 /**
  * MIDDLEWARE
@@ -36,6 +37,7 @@ app.use(express.static("public"));
 app.use(ViewsController);
 app.use(APIController);
 app.use("/api/users", UsersController);
+app.use("/api/auth", AuthController);
 
 /**
  * DB Connection
