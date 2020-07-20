@@ -29,11 +29,11 @@ router.post("/", (req, res) => {
 });
 
 // /api/users/:id
-router.put("/:id", (req, res) => {
-  res.json({
-    message: "Put route",
-  });
-});
+// router.put("/:id", (req, res) => {
+//   res.json({
+//     message: "Put route",
+//   });
+// });
 
 
 module.exports = router;
