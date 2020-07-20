@@ -25,33 +25,43 @@
     margin-right: auto;
     width: 66%;
 }
-.buttons {
-    position: absolute;
-    margin-top: 1%;
+#get-started {
     display: block;
-
 }
+
+#buttons {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+    margin-top: 20%;
+}
+
 #forest {
     text-align: center;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    
 }
 #water {
     text-align: center;
     display: block;
     margin-left: auto;
     margin-right: auto;
+  
 }
 #rocks {
     text-align: center;
     display: block;
     margin-left: auto;
     margin-right: auto;
+  
 }
 #grass {
     text-align: center;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    
 }
