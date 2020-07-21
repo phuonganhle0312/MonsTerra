@@ -1,3 +1,14 @@
+/* Style the video: 100% width and height to cover the entire window */
+/* #bgVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -10;
+  } */
+
+/* Game Setup*/
 .overlay {
     text-align: center;
     display: block;
@@ -25,16 +36,27 @@
     margin-right: auto;
     width: 66%;
 }
+/*index.html*/
 #get-started {
     display: block;
+    margin-top: 100%;
 }
 
+#lore {
+    text-align: center;
+    display: block;
+    margin-left: 20;
+    margin-right: auto;
+    margin-top: 10%;
+    padding-left: 100;
+    padding-right: 100;
+}
+/*game.html*/
 #buttons {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    display: none;
-    margin-top: 20%;
+    margin-top: 10%;
 }
 
 #forest {
@@ -65,3 +87,14 @@
     margin-right: auto;
     
 }
+#inventorysection {
+    display: block;
+    margin-top: 30%;
+    
+}
+/*inventory.html*/
+#backtomap {
+   display: block;
+   margin-top: 45%;
+}
+

@@ -1,59 +1,35 @@
-/**
- * REQUIRE NPM PACKAGES
- * REQUIRE EXTERNAL FILES
- */
-const express = require("express");
-const exphbs = require("express-handlebars");
-
-/**
- * DEFINE VARIABLES
- */
-const PORT = process.env.PORT || 8080;
+const express = require('express');
 const app = express();
 const db = require("./models");
 const ViewsController = require("./controllers/viewsController.js");
 const APIController = require("./controllers/apiController");
 const UsersController = require("./controllers/usersController");
 const AuthController = require("./controllers/authControllers")
+const PORT = process.env.PORT || 3000;
 
-/**
- * MIDDLEWARE
- */
-// Parse application body as JSON
-app.use(express.urlencoded());
+
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-// Handlebars setup
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
 
-/**
- * VIEW ROUTES
- * API ROUTES
- */
-// Serve static content for the app from the "public" directory in the application directory.
-app.use(express.static("public"));
+const userRoutes = require('./routes/user-routes')
+app.use('/api/users', userRoutes);
+
+const profileRoutes = require('./routes/collection-routes')
+app.use('/api/collections', profileRoutes);
+
+const postRoutes = require('./routes/pet-routes')
+app.use('/api/pets', postRoutes)
 
 // Routes
 app.use(ViewsController);
 app.use(APIController);
 app.use("/api/users", UsersController);
 app.use("/api/auth", AuthController);
+const monsterRoutes = require('./routes/monster-routes')
+app.use('/api', monsterRoutes)
 
-/**
- * DB Connection
- * APP LISTEN
- */
-db.sequelize
-    .sync({ force: true })
-//   .sync()
-  .then(() => {
-    // Start our server so that it can begin listening to client requests.
-    app.listen(PORT, function () {
-      // Log (server-side) when our server has started
-      console.log(`Server listening on: http://localhost:${PORT}`);
-    });
-  })
-  .catch((err) => {
-    console.log("Error connecting to the database.");
-    console.log(err);
-  });
+db.sequelize.sync().then(() => {
+    app.listen(PORT, () => {
+        console.log(`listening at ${PORT}`)
+    })
+})
