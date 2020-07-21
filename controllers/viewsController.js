@@ -9,6 +9,15 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
+
+router.post("/login", function(req, res) {
+  console.log("===========================",req)
+  // If the user already has an account send them to the members page
+  if (req.user) {
+    res.redirect("/");
+  }
+});
+
 router.get("/signup", (req, res) => {
   res.render("signup");
 });

@@ -27,27 +27,29 @@ router.post("/signup", (req, res) => {
 
 // login route referenced from office hours activity 
 router.post("/login", (req, res) => {
-  console.log(req.body);
   db.User.findOne({
     where: {
       username: req.body.username,
     },
   })
     .then((foundUser) => {
-      console.log(foundUser);
+        console.log(foundUser)
       bcryptjs
         .compare(req.body.password, foundUser.password)
         .then(function (result) {
-          console.log(result);
+            console.log("-------", result)
           if (result) {
-            res.json({
-              error: false,
-              data: {
-                id: foundUser.id,
-                username: foundUser.username,
-              },
-              message: "authenticated!",
-            });
+            res.redirect("/")
+            // res.json({
+            //   error: false,
+            //   data: {
+            //     id: foundUser.id,
+            //     username: foundUser.username,
+            //   },
+            //   message: "authenticated!",
+            // });
+          }else{
+              res.redirect("/signup")
           }
         });
     })
@@ -62,6 +64,9 @@ router.get("/all", (req, res) => {
     include: [db.Collection],
   }).then((allUsers) => res.send(allUsers));
 });
+
+
+
 
 module.exports = router;
 
