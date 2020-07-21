@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
         },
         colorId: {
-            type: DataTypes.STRING,
+            type: DataTypes.BLOB,
             allowNull: false,
         }
     })
