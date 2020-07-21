@@ -6,7 +6,7 @@ $(document).ready(() => {
     const password = $(".password-input").val();
     console.log(username, password);
     $.post("/api/users/signup", { username, password }).then((response) => {
-      console.log(response);
+      // console.log(response);
     });
   });
 });

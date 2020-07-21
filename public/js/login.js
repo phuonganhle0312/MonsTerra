@@ -5,8 +5,7 @@ $(document).ready(() => {
     const username = $(".username-input").val();
     const password = $(".password-input").val();
     $.post("/api/users/login", { username, password }).then((response) => {
-      console.log(response)
-    // window.location.replace("/")
+    window.location.replace("/")
   });
 });
 });
