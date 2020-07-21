@@ -49,7 +49,7 @@
   
       <div class="columns is-multiline is-overlay is-mobile" id="buttons">
         <div class="column is-half">
-          <button class="title is-4" id="forest">Forest</button>
+          <button class="title is-4" id="grass">Grass</button>
         </div>
         <div class="column is-half">
           <button class="title is-4" id="water">Water</button>
@@ -58,7 +58,7 @@
           <button class="title is-4" id="rocks">Rocks</button>
         </div>
         <div class="column is-half">
-          <button class="title is-4" id="grass">Grass</button>
+          <button class="title is-4" id="forest">Forest</button>
         </div>
   
    
@@ -68,8 +68,16 @@
       <button class="title is-4" id="inventorybtn">Inventory</button>
       </div>
     </div>   
-      
 
+    <!--modal-->
+      
+    <div class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <!-- Any other Bulma elements you want -->
+      </div>
+      <button class="modal-close is-large" aria-label="close">Ok</button>
+    </div>
      
    
     <script>
@@ -81,6 +89,34 @@
             $(location).attr('href',url);
         });
         });
+        $("#grass").click(function() {
+  $(".modal").addClass("is-active");  
+});
+
+$(".modal-close").click(function() {
+   $(".modal").removeClass("is-active");
+});
+$("#water").click(function() {
+  $(".modal").addClass("is-active");  
+});
+
+$(".modal-close").click(function() {
+   $(".modal").removeClass("is-active");
+});
+$("#rocks").click(function() {
+  $(".modal").addClass("is-active");  
+});
+
+$(".modal-close").click(function() {
+   $(".modal").removeClass("is-active");
+});
+$("#forest").click(function() {
+  $(".modal").addClass("is-active");  
+});
+
+$(".modal-close").click(function() {
+   $(".modal").removeClass("is-active");
+});
         </script>
     
   </body>
