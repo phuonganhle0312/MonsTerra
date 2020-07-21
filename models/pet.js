@@ -22,14 +22,13 @@ module.exports = (sequelize, DataTypes) => {
         }
     })
 
-    Pet.associate = models => {
-        Pet.belongsTo(models.Collection, {
-            foreignKey: {
-                allowNull: false
-            }
-        })
-    }
+  Pet.associate = (models) => {
+    Pet.belongsTo(models.Collection, {
+      foreignKey: {
+        allowNull: false,
+      },
+    });
+  };
 
-    return Pet;
+  return Pet;
 };
-

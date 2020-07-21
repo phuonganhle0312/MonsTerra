@@ -10,13 +10,13 @@ module.exports = (sequelize, DataTypes) => {
         }
     })
 
-    Color.associate = models => {
-        Color.belongsTo(models.Monster, {
-            foreignKey: {
-                allowNull: false
-            }
-        })
-    }
+  Color.associate = (models) => {
+    Color.belongsTo(models.Monster, {
+      foreignKey: {
+        allowNull: false,
+      },
+    });
+  };
 
-    return Color;
+  return Color;
 };
