@@ -29,17 +29,11 @@ router.post("/", (req, res) => {
 });
 
 // /api/users/:id
-router.put("/:id", (req, res) => {
-  res.json({
-    message: "Put route",
-  });
-});
+// router.put("/:id", (req, res) => {
+//   res.json({
+//     message: "Put route",
+//   });
+// });
 
-// /api/users/:id
-router.delete("/:id", (req, res) => {
-  res.json({
-    message: "Delete route",
-  });
-});
 
 module.exports = router;

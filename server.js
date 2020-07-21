@@ -1,6 +1,10 @@
 const express = require('express');
 const app = express();
 const db = require("./models");
+const ViewsController = require("./controllers/viewsController.js");
+const APIController = require("./controllers/apiController");
+const UsersController = require("./controllers/usersController");
+const AuthController = require("./controllers/authControllers")
 const PORT = process.env.PORT || 3000;
 
 
@@ -16,6 +20,11 @@ app.use('/api/collections', profileRoutes);
 const postRoutes = require('./routes/pet-routes')
 app.use('/api/pets', postRoutes)
 
+// Routes
+app.use(ViewsController);
+app.use(APIController);
+app.use("/api/users", UsersController);
+app.use("/api/auth", AuthController);
 const monsterRoutes = require('./routes/monster-routes')
 app.use('/api', monsterRoutes)
 
