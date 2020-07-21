@@ -1,8 +1,11 @@
+
+let breakEl;
+
 $(document).ready(function() {
     // Getting references to our form and input
     var forestButton = $("#forest");
     var area;
-    const modal = $("#modal-content")
+    const modal = $("#monster-image")
     // When the signup button is clicked, we validate the email and password are not blank
     forestButton.on("click", function(event) {
         event.preventDefault();
@@ -11,8 +14,15 @@ $(document).ready(function() {
         $.get(`/api/monsters/find/${area}`, {
         }).then(function(data) {
             console.log(data)
-            // modal.empty();
-            // modal.append(data)
+            modal.empty();
+            let buttonEl = $('<button>').attr('id', 'catch').text('Catch monster!');
+            breakEl = $('<br>');
+            modal.append(data, breakEl, buttonEl)
+            $(".modal").addClass("is-active");  
             })
+    });
+
+    $(".modal-close").click(function() {
+        $(".modal").removeClass("is-active");
     });
 });
