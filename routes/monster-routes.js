@@ -5,8 +5,11 @@ const db = require("../models");
 let setSpecies;
 let setArea;
 let setRarity;
-let setColor;
+let setColorId;
+let setColorSrc;
+let setSrc;
 let num;
+let colorNum;
 
 router.post("/monsters/new", (req, res) => {
   db.Monster.create({
@@ -25,21 +28,52 @@ router.post("/color/new", (req, res) => {
   }).then((newPet) => res.send(newPet));
 });
 
-router.get("/monster/find/:id", (req, res) => {
-  findRarity();
-  console.log(setRarity);
-  db.Monster.findAll({
-    where: {
-      dex_area: req.params.id,
-    },
-    include: [db.Color],
-  }).then((monster) => {
-    findMonster(monster);
-    res.send(monster[num]);
-    console.log(monster[num].dataValues);
-    setSpecies = monster[num].dataValues.dex_species;
-    setArea = monster[num].dataValues.dex_area;
-  });
+// router.get('/monster/find/:id', (req, res) => {
+//     findRarity();
+//     console.log('rarity: ' + setRarity)
+//     db.Monster.findAll({
+//         where: {
+//             dex_area: req.params.id,
+//             dex_rarity: setRarity,
+//         }
+//     }).then(monster => {
+//         res.send(monster)
+//     })
+// })
+
+router.get('/monster/find/:id', (req, res) => {
+    findRarity();
+    console.log(setRarity)
+    db.Monster.findAll({
+        where: {
+            dex_area: req.params.id,
+            dex_rarity: setRarity,
+        },
+        include: [db.Color]
+    }).then(monster => {
+        findMonster(monster);
+        findColor(monster);
+        setSpecies = monster[num].dataValues.dex_species;
+        console.log(monster[num].dataValues.dex_species)
+        setArea = monster[num].dataValues.dex_area;
+        console.log(monster[num].dataValues.dex_area)
+        setColorSrc = monster[num].Colors[colorNum].src;
+        console.log(monster[num].Colors[colorNum].src)
+        setColorId = monster[num].Colors[colorNum].colorId;
+        console.log(monster[num].Colors[colorNum].colorId)
+        res.send(`<img src=${setColorSrc}>`)
+        });
+})
+
+router.post('/monsters/add', (req, res) => {
+    db.Pet.create({
+        species: setSpecies,
+        area: setArea,
+        rarity: setRarity,
+        color_src: setColorSrc,
+        color: setColorId,
+        CollectionId: req.body.CollectionId,
+    }).then(newPet=> res.send(newPet))
 });
 
 router.post("/monsters/add", (req, res) => {
@@ -64,9 +98,14 @@ findRarity = (region) => {
 };
 
 findMonster = (monster) => {
-  num = Math.floor(Math.random() * (monster.length - 1));
-  console.log(monster.length - 1);
-  console.log(num);
-};
+    num = Math.floor(Math.random() * (monster.length))
+    console.log(num);
+}
+
+findColor = (monster) => {
+    colorNum = Math.floor(Math.random() * (monster[num].Colors.length))
+    console.log(colorNum);
+}
+
 
 module.exports = router;

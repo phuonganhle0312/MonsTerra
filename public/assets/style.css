@@ -1,13 +1,15 @@
 /* Style the video: 100% width and height to cover the entire window */
-/* #bgVideo {
+#bgVideo {
     position: fixed;
     right: 0;
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
     z-index: -10;
-  } */
-
+  }
+.navbar {
+    margin-bottom: 5%;
+}
 /* Game Setup*/
 .overlay {
     text-align: center;
@@ -26,6 +28,15 @@
     margin-right: auto;
 }
 
+.map {
+    position: relative;
+    padding-top: 3.5%;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 66%;
+}
 
 .sky {
     position: relative;
@@ -39,7 +50,7 @@
 /*index.html*/
 #get-started {
     display: block;
-    margin-top: 100%;
+    margin-top: 200%;
 }
 
 #lore {
@@ -47,7 +58,7 @@
     display: block;
     margin-left: 20;
     margin-right: auto;
-    margin-top: 10%;
+    margin-top: 20%;
     padding-left: 100;
     padding-right: 100;
 }
@@ -93,8 +104,8 @@
     
 }
 /*inventory.html*/
-#backtomap {
+/* #backtomap {
    display: block;
    margin-top: 45%;
-}
+} */
 
