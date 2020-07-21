@@ -8,8 +8,12 @@ const AuthController = require("./controllers/authControllers")
 const PORT = process.env.PORT || 3000;
 
 
+app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+const exphbs = require("express-handlebars");
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
 
 const userRoutes = require('./routes/user-routes')
 app.use('/api/users', userRoutes);
@@ -33,3 +37,5 @@ db.sequelize.sync().then(() => {
         console.log(`listening at ${PORT}`)
     })
 })
+
+
