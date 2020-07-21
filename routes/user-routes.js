@@ -1,33 +1,33 @@
 const express = require("express");
 const router = express.Router();
 const db = require("../models");
+const path = require("path");
 
-router.post('/new', (req, res) => {
+
+router.post("/new", (req, res) => {
+  db.User.create({
+    username: req.body.username,
+    password: req.body.password,
+  }).then((newUser) => res.send(newUser));
+});
+
+//post route for signup
+router.post("/signup", (req, res) => {
     db.User.create({
-        username: req.body.username,
-        password: req.body.password
-    }).then(newUser => res.send(newUser));
-})
+      username: req.body.username,
+      password: req.body.password,
+    }).then((newUser) => res.send(newUser));
+  });
 
-router.get('/all', (req, res) => {
-    db.User.findAll({
-        include: [db.Collection]
-    }).then(allUsers => res.send(allUsers));
-})
+router.get("/all", (req, res) => {
+  db.User.findAll({
+    include: [db.Collection],
+  }).then((allUsers) => res.send(allUsers));
+});
 
 module.exports = router;
 
 
-
-
-// const path = require("path");
-
-// module.exports = function (app) {
-//   app.post("/register", (req, res) => {
-//     db.User.create({
-//       email: req.body.email,
-//       password: req.body.password,
-//     })
 //       .then(function () {
 //         console.log(User);
 //         res.redirect("/api/login");

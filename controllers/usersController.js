@@ -7,7 +7,7 @@ router.post("/", (req, res) => {
   bcrypt.hash(req.body.password, 5).then(function (hash) {
     console.log(hash);
     db.User.create()({
-      email: req.body.email,
+      username: req.body.username,
       password: hash,
     })
       .then((result) => {
@@ -34,6 +34,5 @@ router.post("/", (req, res) => {
 //     message: "Put route",
 //   });
 // });
-
 
 module.exports = router;

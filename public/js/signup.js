@@ -4,6 +4,9 @@ $(document).ready(() => {
     event.preventDefault();
     const username = $(".username").val();
     const password = $(".password-input").val();
-    console.log(username, password)
+    console.log(username, password);
+    $.post("/api/auth", { username, password }).then((response) => {
+      console.log(response);
+    });
   });
 });
