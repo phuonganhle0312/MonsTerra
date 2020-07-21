@@ -1,9 +1,10 @@
 const express = require("express");
 const router = express.Router();
 const db = require("../models");
+const bcryptjs = require("bcryptjs")
 
 // /api/users/
-router.post("/", (req, res) => {
+router.post("/api/users/signup", (req, res) => {
   bcrypt.hash(req.body.password, 5).then(function (hash) {
     console.log(hash);
     db.User.create()({
