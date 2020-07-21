@@ -1,12 +1,13 @@
 $(document).ready(() => {
-  console.log("please");
   $(".login-form").on("submit", (event) => {
     event.preventDefault();
+    console.log("clicked");
     const username = $(".username-input").val();
     const password = $(".password-input").val();
-    console.log(username, password);
-    $.post("/api/auth", { username, password }).then((response) => {
-      console.log(response);
+    $.post("/api/users/login", { username, password }).then((response) => {
+      window.location.replace("/")
+
     });
   });
 });
+
