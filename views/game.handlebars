@@ -1,7 +1,8 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="/">
-      <img src="https://res.cloudinary.com/dw2l5yiim/image/upload/v1595382885/MonsTerraLogo_i3nctc.png" width="112" height="28">
+      <img src="https://res.cloudinary.com/dw2l5yiim/image/upload/v1595382885/MonsTerraLogo_i3nctc.png" width="112"
+        height="28">
     </a>
   </div>
 
@@ -19,14 +20,14 @@
     </div>
   </div>
 </nav>
-  
+
 
 <!-- game console -->
 <div class="container is-overlay is-mobile" id="game-screen">
   <div class="overlay">
     <img src="/assets/images/MonsterraConsole.png" width=100% height=100% class="console-overlay">
-    
-  </div> 
+
+  </div>
   <img src="/assets/images/map.png" width="900" height="700" alt="map" class="map">
 
   <!--Div for area buttons-->
@@ -44,22 +45,24 @@
       <button class="title is-4" id="forest">Forest</button>
     </div>
 
-<!--Div for inventory button-->
-<div class="columns is-centered is-overlay is-mobile" id="inventorysection">
-  <button class="title is-4" id="inventorybtn"><a href="/api/users/collection">Collection</a></button>
+    <!--Div for inventory button-->
+    <div class="columns is-centered is-overlay is-mobile" id="inventorysection">
+      <button class="title is-4" id="inventorybtn"><a href="/api/users/collection">Collection</a></button>
+    </div>
   </div>
-</div>   
-<!--modal-->
-  
-<div class="modal">
-  <div class="modal-background">
+  <!--modal-->
+
+  <div class="modal pets-modal">
+    <div class="modal-background">
+    </div>
+    <div class="modal-content pets-modal">
+      <div id="monster-image"></div>
+      <!-- Any other Bulma elements you want -->
+      <button id="catch">Catch Monster!</button>
+    </div>
+    <button class="modal-close is-large" aria-label="close">Ok</button>
   </div>
-  <div class="modal-content">
-    <div id="monster-image"></div>
-    <!-- Any other Bulma elements you want -->
-    <button id ="catch">Catch Monster!</button>
-  </div>
-  <button class="modal-close is-large" aria-label="close">Ok</button>
 </div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="/assets/js/game.js"></script>

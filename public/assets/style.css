@@ -28,6 +28,15 @@ body {background-image: url("https://i.imgur.com/jLsW24D.png");
     margin-right: auto;
 }
 
+.pets-modal {
+    align-content: center;
+    text-align: center;
+}
+
+.pets-image {
+    float: center;
+}
+
 .map {
     position: relative;
     padding-top: 3.5%;
