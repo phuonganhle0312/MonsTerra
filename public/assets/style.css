@@ -1,5 +1,4 @@
-/* Style the video: 100% width and height to cover the entire window */
-#bgVideo {
+body {background-image: url("https://i.imgur.com/jLsW24D.png");
     position: fixed;
     right: 0;
     bottom: 0;
@@ -7,6 +6,7 @@
     min-height: 100%;
     z-index: -10;
   }
+
 .navbar {
     margin-bottom: 5%;
 }

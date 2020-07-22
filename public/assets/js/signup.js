@@ -49,7 +49,7 @@ $(document).ready(function() {
         
         // })
         console.log('user data: ' + data)
-        // window.location.replace("/");
+        window.location.replace("/login");
         // If there's an error, handle it by throwing up a bootstrap alert
       })
       .catch(handleLoginErr);

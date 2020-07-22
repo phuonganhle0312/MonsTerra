@@ -1,7 +1,7 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="https://bulma.io">
-      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+    <a class="navbar-item" href="/">
+      <img src="https://res.cloudinary.com/dw2l5yiim/image/upload/v1595382885/MonsTerraLogo_i3nctc.png" width="112" height="28">
     </a>
   </div>
 
@@ -9,8 +9,11 @@
     <div class="navbar-item">
       <div class="buttons">
 
-        <a class="button is-light">
-          Log Out
+        <a href="/login" class="button is-light login">
+          Log in
+        </a>
+        <a href="/signup" class="button is-light login">
+          Signup
         </a>
       </div>
     </div>
@@ -43,7 +46,7 @@
 
 <!--Div for inventory button-->
 <div class="columns is-centered is-overlay is-mobile" id="inventorysection">
-  <button class="title is-4" id="inventorybtn">Inventory</button>
+  <button class="title is-4" id="inventorybtn"><a href="/api/users/collection">Collection</a></button>
   </div>
 </div>   
 <!--modal-->
