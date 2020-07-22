@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const db = require("../models");
+const { Op } = require("sequelize");
 
 let setSpecies;
 let setArea;
@@ -41,12 +42,29 @@ router.post("/color/new", (req, res) => {
 //     })
 // })
 
-router.get('/monster/find/:id', (req, res) => {
+router.get('/monster/species/:id', (req, res) => {
     findRarity();
     console.log(setRarity)
     db.Monster.findAll({
         where: {
-            dex_area: req.params.id,
+            MonsterId: req.params.id,
+        },
+        include: [db.Color]
+    }).then(monster => {
+        res.send(monster)
+    })
+})
+
+
+router.get('/monsters/find/:id', (req, res) => {
+    findRarity();
+    console.log(setRarity)
+    db.Monster.findAll({
+        where: {
+            [Op.or]: [
+                { dex_area: req.params.id },
+                { dex_area: 5 }
+            ],
             dex_rarity: setRarity,
         },
         include: [db.Color]
@@ -54,37 +72,40 @@ router.get('/monster/find/:id', (req, res) => {
         findMonster(monster);
         findColor(monster);
         setSpecies = monster[num].dataValues.dex_species;
-        console.log(monster[num].dataValues.dex_species)
+        console.log('species: ' + monster[num].dataValues.dex_species)
         setArea = monster[num].dataValues.dex_area;
-        console.log(monster[num].dataValues.dex_area)
-        setColorSrc = monster[num].Colors[colorNum].src;
-        console.log(monster[num].Colors[colorNum].src)
+        console.log('area: ' + monster[num].dataValues.dex_area)
         setColorId = monster[num].Colors[colorNum].colorId;
-        console.log(monster[num].Colors[colorNum].colorId)
-        res.send(`<img src=${setColorSrc}>`)
+        console.log('color id: ' + monster[num].Colors[colorNum].colorId)
+        setColorSrc = monster[num].Colors[colorNum].src;
+        console.log('color src: ' + monster[num].Colors[colorNum].src)
+        db.Pet.create({
+            species: setSpecies,
+            area: setArea,
+            rarity: setRarity,
+            color_src: setColorSrc,
+            color: setColorId,
+            CollectionId: req.user.id
+        })
+        res.send(`
+        <img src=${setColorSrc}><br>
+        ${setRarity}`)
         });
 })
 
-router.post('/monsters/add', (req, res) => {
-    db.Pet.create({
-        species: setSpecies,
-        area: setArea,
-        rarity: setRarity,
-        color_src: setColorSrc,
-        color: setColorId,
-        CollectionId: req.body.CollectionId,
-    }).then(newPet=> res.send(newPet))
-});
+// router.post('/monsters/add', (req, res) => {
+    
+// });
 
-router.post("/monsters/add", (req, res) => {
-  console.log(setSpecies);
-  db.Pet.create({
-    species: setSpecies,
-    area: setArea,
-    rarity: setRarity,
-    CollectionId: 1,
-  }).then((newPet) => res.send(newPet));
-});
+// router.post("/monsters/add", (req, res) => {
+//   console.log(setSpecies);
+//   db.Pet.create({
+//     species: setSpecies,
+//     area: setArea,
+//     rarity: setRarity,
+//     CollectionId: 1,
+//   }).then((newPet) => res.send(newPet));
+// });
 
 findRarity = (region) => {
   num = Math.floor(Math.random() * 100) + 1;
@@ -103,6 +124,8 @@ findMonster = (monster) => {
 }
 
 findColor = (monster) => {
+    console.log(monster[num].Colors)
+    console.log(monster[num].Colors.length)
     colorNum = Math.floor(Math.random() * (monster[num].Colors.length))
     console.log(colorNum);
 }
