@@ -79,33 +79,33 @@ router.get('/monsters/find/:id', (req, res) => {
         console.log('color id: ' + monster[num].Colors[colorNum].colorId)
         setColorSrc = monster[num].Colors[colorNum].src;
         console.log('color src: ' + monster[num].Colors[colorNum].src)
-        
+        db.Pet.create({
+            species: setSpecies,
+            area: setArea,
+            rarity: setRarity,
+            color_src: setColorSrc,
+            color: setColorId,
+            CollectionId: req.user.id
+        })
         res.send(`
         <img src=${setColorSrc}><br>
         ${setRarity}`)
         });
 })
 
-router.post('/monsters/add', (req, res) => {
-    db.Pet.create({
-        species: setSpecies,
-        area: setArea,
-        rarity: setRarity,
-        color_src: setColorSrc,
-        color: setColorId,
-        CollectionId: req.body.CollectionId,
-    }).then(newPet=> res.send(newPet))
-});
+// router.post('/monsters/add', (req, res) => {
+    
+// });
 
-router.post("/monsters/add", (req, res) => {
-  console.log(setSpecies);
-  db.Pet.create({
-    species: setSpecies,
-    area: setArea,
-    rarity: setRarity,
-    CollectionId: 1,
-  }).then((newPet) => res.send(newPet));
-});
+// router.post("/monsters/add", (req, res) => {
+//   console.log(setSpecies);
+//   db.Pet.create({
+//     species: setSpecies,
+//     area: setArea,
+//     rarity: setRarity,
+//     CollectionId: 1,
+//   }).then((newPet) => res.send(newPet));
+// });
 
 findRarity = (region) => {
   num = Math.floor(Math.random() * 100) + 1;

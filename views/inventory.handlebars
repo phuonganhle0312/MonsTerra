@@ -33,7 +33,14 @@
 
   <!--Div for map button-->
   <div class="columns is-centered is-overlay is-mobile" id="backtomap">
-    <div id="collection"></div>
+    <div id="collection">
+      <ul>
+        {{#each pets}}
+        <img src="{{this}}">
+        {{/each}}
+      </ul>
+
+    </div>
   </div>
 </div>
 
@@ -42,4 +49,5 @@
 <footer class="has-text-centered">
   <p> © 2020 Copyright</p>
 </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="/assets/js/collection.js"></script>

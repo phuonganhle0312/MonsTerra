@@ -26,7 +26,8 @@ router.get("/game", (req, res) => {
   res.render("game");
 });
 
-router.get("/user", (req, res) => {
+router.get("/users/me", (req, res) => {
   res.render("inventory");
 });
+
 module.exports = router;

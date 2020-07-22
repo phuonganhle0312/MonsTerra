@@ -22,7 +22,9 @@ $(document).ready(function() {
             })
     });
 
-    $(".modal-close").click(function() {
+    $(".catch").click(function() {
         $(".modal").removeClass("is-active");
     });
+
+
 });

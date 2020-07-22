@@ -45,8 +45,11 @@ $(document).ready(function() {
       password: password
     })
       .then(function(data) {
-        console.log(data)
-        window.location.replace("/");
+        // $.post("/api/collections/new", {
+        
+        // })
+        console.log('user data: ' + data)
+        // window.location.replace("/");
         // If there's an error, handle it by throwing up a bootstrap alert
       })
       .catch(handleLoginErr);

@@ -10,8 +10,6 @@
 //   });
 // });
 // });
-
-
 $(document).ready(function() {
   // Getting references to our form and inputs
   var loginForm = $(".login-form");
@@ -25,7 +23,7 @@ $(document).ready(function() {
       username: usernameInput.val().trim(),
       password: passwordInput.val().trim()
     };
-
+    console.log(userData)
     if (!userData.username || !userData.password) {
       return;
     }
@@ -38,15 +36,11 @@ $(document).ready(function() {
 
   // loginUser does a post to our "api/login" route and if successful, redirects us the the members page
   function loginUser(username, password) {
-    console.log('finding user')
     $.post("/api/users/login", {
       username: username,
       password: password
     })
-      .then(function(data) {
-        console.log('hello')
-        window.location.replace("/game");
-        console.log(data)
+      .then(function() {
         // If there's an error, log the error
       })
       .catch(function(err) {
