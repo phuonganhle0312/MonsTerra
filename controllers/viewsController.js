@@ -21,4 +21,13 @@ router.post("/login", function(req, res) {
 router.get("/signup", (req, res) => {
   res.render("signup");
 });
+
+router.get("/game", (req, res) => {
+  res.render("game");
+});
+
+router.get("/users/me", (req, res) => {
+  res.render("inventory");
+});
+
 module.exports = router;

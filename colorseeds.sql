@@ -1,10 +1,34 @@
 //POM 0
-INSERT INTO colors (src, colorId, MonsterId, createdAt, updatedAt) VALUES ('https://res.cloudinary.com/dw2l5yiim/image/upload/v1595269788/HLpets/Pom/cPM01_zznuea.png', '1', '0', NOW(), NOW());
-INSERT INTO colors (src, colorId, MonsterId, createdAt, updatedAt) VALUES ('https://res.cloudinary.com/dw2l5yiim/image/upload/v1595269789/HLpets/Pom/cPM02_jbgfzv.png', '2', '0', NOW(), NOW());
-INSERT INTO colors (src, colorId, MonsterId, createdAt, updatedAt) VALUES ('https://res.cloudinary.com/dw2l5yiim/image/upload/v1595269790/HLpets/Pom/cPM03_ycsdep.png', '3', '0', NOW(), NOW());
-INSERT INTO colors (src, colorId, MonsterId, createdAt, updatedAt) VALUES ('https://res.cloudinary.com/dw2l5yiim/image/upload/v1595269791/HLpets/Pom/cPM04_jbhzdd.png', '4', '0', NOW(), NOW());
-INSERT INTO colors (src, colorId, MonsterId, createdAt, updatedAt) VALUES ('https://res.cloudinary.com/dw2l5yiim/image/upload/v1595269792/HLpets/Pom/cPM05_u016od.png', '5', '0', NOW(), NOW());
-INSERT INTO colors (src, colorId, MonsterId, createdAt, updatedAt) VALUES ('https://res.cloudinary.com/dw2l5yiim/image/upload/v1595269793/HLpets/Pom/cPM06_itb3vi.png', '6', '0', NOW(), NOW());
+INSERT INTO colors (src, colorId, MonsterId, createdAt, updatedAt) VALUES ('https://res.cloudinary.com/dw2l5yiim/image/upload/v1595269788/HLpets/Pom/cPM01_zznuea.png', '1', '29', NOW(), NOW());
+INSERT INTO colors (src, colorId, MonsterId, createdAt, updatedAt) VALUES ('https://res.cloudinary.com/dw2l5yiim/image/upload/v1595269789/HLpets/Pom/cPM02_jbgfzv.png', '2', '29', NOW(), NOW());
+INSERT INTO colors (src, colorId, MonsterId, createdAt, updatedAt) VALUES ('https://res.cloudinary.com/dw2l5yiim/image/upload/v1595269790/HLpets/Pom/cPM03_ycsdep.png', '3', '29', NOW(), NOW());
+INSERT INTO colors (src, colorId, MonsterId, createdAt, updatedAt) VALUES ('https://res.cloudinary.com/dw2l5yiim/image/upload/v1595269791/HLpets/Pom/cPM04_jbhzdd.png', '4', '29', NOW(), NOW());
+INSERT INTO colors (src, colorId, MonsterId, createdAt, updatedAt) VALUES ('https://res.cloudinary.com/dw2l5yiim/image/upload/v1595269792/HLpets/Pom/cPM05_u016od.png', '5', '29', NOW(), NOW());
+INSERT INTO colors (src, colorId, MonsterId, createdAt, updatedAt) VALUES ('https://res.cloudinary.com/dw2l5yiim/image/upload/v1595269793/HLpets/Pom/cPM06_itb3vi.png', '6', '29', NOW(), NOW());
+INSERT INTO colors (src, colorId, MonsterId, createdAt, updatedAt) VALUES ('https://res.cloudinary.com/dw2l5yiim/image/upload/v1595269794/HLpets/Pom/cPM07_ikfsfj.png', '7', '29', NOW(), NOW());
+INSERT INTO colors (src, colorId, MonsterId, createdAt, updatedAt) VALUES ('https://res.cloudinary.com/dw2l5yiim/image/upload/v1595269795/HLpets/Pom/cPM08_uj1bx7.png', '8', '29', NOW(), NOW());
+INSERT INTO colors (src, colorId, MonsterId, createdAt, updatedAt) VALUES ('https://res.cloudinary.com/dw2l5yiim/image/upload/v1595269796/HLpets/Pom/cPM09_hf4xhf.png', '9', '29', NOW(), NOW());
+INSERT INTO colors (src, colorId, MonsterId, createdAt, updatedAt) VALUES ('https://res.cloudinary.com/dw2l5yiim/image/upload/v1595269797/HLpets/Pom/cPM10_vozkur.png', '10', '29', NOW(), NOW());
+INSERT INTO colors (src, colorId, MonsterId, createdAt, updatedAt) VALUES ('https://res.cloudinary.com/dw2l5yiim/image/upload/v1595269798/HLpets/Pom/cPM11_bj7pwx.png', '11', '29', NOW(), NOW());
+INSERT INTO colors (src, colorId, MonsterId, createdAt, updatedAt) VALUES ('https://res.cloudinary.com/dw2l5yiim/image/upload/v1595269799/HLpets/Pom/cPM12_rpk1aj.png', '12', '29', NOW(), NOW());
+INSERT INTO colors (src, colorId, MonsterId, createdAt, updatedAt) VALUES ('https://res.cloudinary.com/dw2l5yiim/image/upload/v1595269800/HLpets/Pom/cPM13_xg6iz3.png', '13', '29', NOW(), NOW());
+INSERT INTO colors (src, colorId, MonsterId, createdAt, updatedAt) VALUES ('https://res.cloudinary.com/dw2l5yiim/image/upload/v1595269801/HLpets/Pom/cPM14_dah3y3.png', '14', '29', NOW(), NOW());
+INSERT INTO colors (src, colorId, MonsterId, createdAt, updatedAt) VALUES ('https://res.cloudinary.com/dw2l5yiim/image/upload/v1595269802/HLpets/Pom/cPM15_tb8cfp.png', '15', '29', NOW(), NOW());
+INSERT INTO colors (src, colorId, MonsterId, createdAt, updatedAt) VALUES ('https://res.cloudinary.com/dw2l5yiim/image/upload/v1595269803/HLpets/Pom/cPM16_e9jnon.png', '16', '29', NOW(), NOW());
+INSERT INTO colors (src, colorId, MonsterId, createdAt, updatedAt) VALUES ('https://res.cloudinary.com/dw2l5yiim/image/upload/v1595269804/HLpets/Pom/cPM17_nxjzes.png', '17', '29', NOW(), NOW());
+INSERT INTO colors (src, colorId, MonsterId, createdAt, updatedAt) VALUES ('https://res.cloudinary.com/dw2l5yiim/image/upload/v1595269805/HLpets/Pom/cPM18_mbwctt.png', '18', '29', NOW(), NOW());
+INSERT INTO colors (src, colorId, MonsterId, createdAt, updatedAt) VALUES ('https://res.cloudinary.com/dw2l5yiim/image/upload/v1595269806/HLpets/Pom/cPM19_te0pqs.png', '19', '29', NOW(), NOW());
+INSERT INTO colors (src, colorId, MonsterId, createdAt, updatedAt) VALUES ('https://res.cloudinary.com/dw2l5yiim/image/upload/v1595269807/HLpets/Pom/cPM20_bvueul.png', '20', '29', NOW(), NOW());
+
+
+INSERT INTO colors (src, colorId, MonsterId, createdAt, updatedAt) VALUES ('', '13', '0', NOW(), NOW());
+INSERT INTO colors (src, colorId, MonsterId, createdAt, updatedAt) VALUES ('', '14', '0', NOW(), NOW());
+INSERT INTO colors (src, colorId, MonsterId, createdAt, updatedAt) VALUES ('', '15', '0', NOW(), NOW());
+INSERT INTO colors (src, colorId, MonsterId, createdAt, updatedAt) VALUES ('', '16', '0', NOW(), NOW());
+INSERT INTO colors (src, colorId, MonsterId, createdAt, updatedAt) VALUES ('', '17', '0', NOW(), NOW());
+INSERT INTO colors (src, colorId, MonsterId, createdAt, updatedAt) VALUES ('', '18', '0', NOW(), NOW());
+INSERT INTO colors (src, colorId, MonsterId, createdAt, updatedAt) VALUES ('', '19', '0', NOW(), NOW());
+INSERT INTO colors (src, colorId, MonsterId, createdAt, updatedAt) VALUES ('', '20', '0', NOW(), NOW());
 
 
 //GHOSTFLY 1
