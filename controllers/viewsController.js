@@ -9,6 +9,11 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
+// // router.get('/hello', function(req, res) {
+//   res.send({ username: req.user.username });
+// });
+
+
 
 router.post("/login", function(req, res) {
   console.log("===========================",req)
